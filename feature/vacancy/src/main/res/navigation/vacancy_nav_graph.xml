@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/vacancy_nav_graph"
+    app:startDestination="@id/vacancyFragment">
+    <fragment
+        android:id="@+id/vacancyFragment"
+        android:name="com.superjob.android.feature.vacancy.VacancyFragment"
+        android:label="VacancyFragment"
+        tools:layout="@layout/fragment_vacancy">
+        <argument
+            android:name="vacancyId"
+            app:argType="string"/>
+        <deepLink app:uri="android-app://com.superjob.android/fragment_vacancy{vacancyId}"/>
+    </fragment>
+</navigation>
